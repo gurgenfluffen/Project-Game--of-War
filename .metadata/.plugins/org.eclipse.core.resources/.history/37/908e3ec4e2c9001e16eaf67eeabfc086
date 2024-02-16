@@ -1,0 +1,24 @@
+package finalCodingProject_WAR;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class Deck {
+
+	List<Card> cards = new ArrayList<Card>();
+	
+	public static void shuffle() {
+		
+		
+	}
+	
+	public static void draw() {
+		
+		
+	}
+	
+	
+	
+}

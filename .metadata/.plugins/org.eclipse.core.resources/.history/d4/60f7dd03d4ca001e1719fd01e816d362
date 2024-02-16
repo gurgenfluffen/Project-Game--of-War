@@ -1,0 +1,36 @@
+package finalCodingProject_WAR;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Player {
+
+	List<Card> hand = new ArrayList<Card>();
+	int score;
+	String name;
+	
+	public Player() {
+		
+		 
+		
+	}
+	
+	public static void describeHand() {
+		
+		
+	}
+	
+	public static void flip() {
+		
+		
+	}
+	
+	public static void draw() {
+		
+	}
+	
+	public static void incrementScore() {
+		
+		
+	}
+}

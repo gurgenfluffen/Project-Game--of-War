@@ -1,0 +1,35 @@
+package finalCodingProject_WAR;
+
+import java.util.List;
+
+public class Card {
+
+	private String value;
+	private String name;
+	
+	public String getValue() {
+		return value;
+	}
+	
+	public void setValue() {
+		this.value = value;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName() {
+		this.name = name;
+	}
+	
+	
+	
+	
+	public void describe() {
+		System.out.println("Card Description:");
+		System.out.println("------------------");
+		System.out.println("Name: " + name);
+		System.out.println("Value: " + value);
+	}
+}

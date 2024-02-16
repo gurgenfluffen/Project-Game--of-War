@@ -1,0 +1,53 @@
+package finalCodingProject_WAR;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Player {
+
+	List<Card> hand = new ArrayList<Card>();
+	int score;
+	String name;
+	
+	public Player() {
+		this.score = 0;
+		String[] names = {"Spades", "Hearts", "Clubs", "Diamonds"};
+		String[] values = {"Two", "Three", "Four", "Five", "Six", "Seven", 
+							"Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
+	
+		for (String name : names) {
+			int count = 2;
+			for (String value : values) {
+				hand.add(new Card(value, name, count));				
+				count++;
+			}
+		}
+		 
+		
+	}
+	
+	public void describePlayer() {
+		System.out.println("----------------------");
+		System.out.println("Player Name:" + name);
+		System.out.println("Player Score:" + score);
+		for (int i = 0; i < hand.size(); i++) {
+			System.out.println("Player Hand: \n" + hand);
+		}
+		System.out.println("-----------------------");
+	}
+	
+	public Card flip() {
+		Card deckCard = this.hand.remove(0);
+		return deckCard;
+		
+	}
+	
+	public void draw() {
+		
+	}
+	
+	public void incrementScore() {
+		score++;
+		
+	}
+}

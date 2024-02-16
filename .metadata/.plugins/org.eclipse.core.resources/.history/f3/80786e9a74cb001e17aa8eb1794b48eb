@@ -1,0 +1,22 @@
+package finalCodingProject_WAR;
+
+import java.util.Collections;
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		
+		Deck deck = new Deck();
+		System.out.println("The deck has been created!");
+		deck.describe();
+		deck.shuffle();
+		System.out.println("The deck has been shuffled!");
+		System.out.println("Shuffled deck:");
+		deck.describe();
+		
+	}
+
+	
+
+}

@@ -1,0 +1,85 @@
+package finalCodingProject_WAR;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+
+public class Deck {
+
+	List<Card> cards = new ArrayList<Card>();
+	
+	public Deck(){
+		
+		int[] valuesOfCards = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
+		String[] namesOfCards1 = {"Two of Clubs", "Three of Clubs", "Four of Clubs", "Five of Clubs",
+				"Six of Clubs", "Seven of Clubs", "Eight of Clubs", "Nine of Clubs", "Ten of Clubs",
+				"Jack of Clubs", "Queen of Clubs", "King of Clubs", "Ace of Clubs"};
+		String[] namesOfCards2 = {"Two of Diamonds", "Three of Diamonds", "Four of Diamonds", 
+				"Five of Diamonds","Six of Diamonds", "Seven of Diamonds", "Eight of Diamonds", 
+				"Nine of Diamonds", "Ten of Diamonds", "Jack of Diamonds", "Queen of Diamonds", 
+				"King of Diamonds", "Ace of Diamonds"};
+		String[] namesOfCards3 = {"Two of Hearts", "Three of Hearts", "Four of Hearts", 
+				"Five of Hearts","Six of Hearts", "Seven of Hearts", "Eight of Hearts", 
+				"Nine of Hearts", "Ten of Hearts", "Jack of Hearts", "Queen of Hearts", 
+				"King of Hearts", "Ace of Hearts"};
+		String[] namesOfCards4 = {"Two of Spades", "Three of Spades", "Four of Spades", 
+				"Five of Spades","Six of Spades", "Seven of Spades", "Eight of Spades", 
+				"Nine of Spades", "Ten of Spades", "Jack of Spades", "Queen of Spades", 
+				"King of Spades", "Ace of Spades"};
+			
+		for (String name1 : namesOfCards1) {
+			for (int valueOfCard : valuesOfCards) {
+				cards.add(new Card(valueOfCard, name1));
+			}
+		}
+		for (String name2 : namesOfCards1) {
+			for (int valueOfCard : valuesOfCards) {
+				cards.add(new Card(valueOfCard, name2));
+			}
+		}
+		for (String name3 : namesOfCards1) {
+			for (int valueOfCard : valuesOfCards) {
+				cards.add(new Card(valueOfCard, name3));
+			}
+		}
+		for (String name4 : namesOfCards1) {
+			for (int valueOfCard : valuesOfCards) {
+				cards.add(new Card(valueOfCard, name4));
+			}
+		}
+		
+			
+		}
+		
+		
+		
+	public List<Card> getCard(){
+		return cards;
+	}
+	
+	public void setCard(List<Card> cards){
+		this.cards = cards;
+	}
+	
+	public void shuffle() {
+		Collections.shuffle(this.cards);
+	}
+	
+	public Card draw() {
+		Card deckCard = this.cards.remove(0);
+		return deckCard;
+	}
+
+
+
+	public void describe() {
+		for (Card card : this.cards) {
+			card.describe();
+		}
+	}
+	
+	
+	
+}

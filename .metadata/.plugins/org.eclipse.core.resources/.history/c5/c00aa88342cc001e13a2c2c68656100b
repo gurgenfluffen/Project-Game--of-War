@@ -1,0 +1,33 @@
+package finalCodingProject_WAR;
+
+public class Card {
+
+	int value;
+	String name;
+	
+	public Card(int count, String name) {
+		this.value = value;
+		this.name = name;
+	}
+	
+
+	public int getValue() {
+		return value;
+	}
+	
+	public void setValue() {
+		this.value = value;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName() {
+		this.name = name;
+	}
+	
+	public void describe() {
+		System.out.println(this.value + " of " + this.name);
+	}
+}

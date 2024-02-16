@@ -1,0 +1,51 @@
+package finalCodingProject_WAR;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+
+public class Deck {
+
+	List<Card> cards = new ArrayList<Card>();
+	
+	public Deck(){
+		
+		String[] names = {"Hearts", "Spades", "Clubs", "Diamonds"};
+		String[] numbers = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", 
+				"Jack", "Queen", "King", "Ace"};
+		
+		int i = 2;
+		for (String name : names) {
+			for (String number : numbers) {
+				cards.add(new Card(name, number, i));
+				i++;
+			}
+		}
+				
+		
+			
+		}
+		
+		
+		
+	public List<Card> getCard(){
+		return cards;
+	}
+	
+	public void setCard(List<Card> cards){
+		this.cards = cards;
+	}
+	
+	public void shuffle() {
+		Collections.shuffle(this.cards);
+	}
+	
+	public void draw() {
+		Card deckCard = this.cards.remove(0);
+	}
+	
+	
+	
+}

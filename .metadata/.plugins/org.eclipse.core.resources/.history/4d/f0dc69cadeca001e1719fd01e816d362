@@ -1,0 +1,37 @@
+package finalCodingProject_WAR;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Player {
+
+	List<Card> hand = new ArrayList<Card>();
+	int score;
+	String name;
+	
+	public Player() {
+		this.score = 0;
+		 
+		
+	}
+	
+	public void describePlayer() {
+		
+		
+	}
+	
+	public Card flip() {
+		Card deckCard = this.hand.remove(0);
+		return deckCard;
+		
+	}
+	
+	public void draw() {
+		
+	}
+	
+	public void incrementScore() {
+		score++;
+		
+	}
+}
